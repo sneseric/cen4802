@@ -1,6 +1,15 @@
+/**
+ * This class contains methods to calculate Fibonacci sequence terms and get ordinal suffixes.
+ */
 public class Assignment2Fibonacci {
 
-    // A recursive method to calculate the nth term of the Fibonacci sequence
+    /**
+     * Calculates the nth term of the Fibonacci sequence using a recursive approach.
+     *
+     * @param n The position of the term to be calculated (must be a positive integer).
+     * @return The nth term of the Fibonacci sequence.
+     * @throws IllegalArgumentException If n is not a positive integer.
+     */
     public static int fibonacci(int n) {
         if (n <= 0) {
             throw new IllegalArgumentException("n has to be a positive integer");
@@ -12,7 +21,12 @@ public class Assignment2Fibonacci {
         }
     }
 
-    // Method to get the ordinal suffix for a number (make output grammatically correct)
+    /**
+     * Gets the ordinal suffix for a number to make the output grammatically correct.
+     *
+     * @param number The number for which the ordinal suffix is needed.
+     * @return The ordinal suffix (e.g., "st" for 1, "nd" for 2, "rd" for 3, "th" for others).
+     */
     public static String getOrdinalSuffix(int number) {
         if (number >= 11 && number <= 13) {
             return "th";
